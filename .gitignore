@@ -1,2 +1,4 @@
 back/target/
 front/target/
+front/src/main/front/node_modules/
+front/src/main/front/node/
