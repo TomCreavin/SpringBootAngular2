@@ -1,6 +1,12 @@
 <div>
   <ul>
-    <li><a routerLink="/home" routerLinkActive="active">HOME</a></li>
+    <li><a routerLink="/home" routerLinkActive="active">HOME1</a></li>
     <li><a routerLink="/register" routerLinkActive="active">REGISTER</a></li>
+    <li><a *ngIf="!loginService.checkLogin()" routerLink="/register" routerLinkActive="active" >
+      Register
+      </a></li>
+      <li>    <a routerLink="/login" routerLinkActive="active" (click)="onClick()">
+      {{loginService.checkLogin()? 'Logout' : 'Login'}}
+    </a></li>
   </ul>
 </div>
