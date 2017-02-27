@@ -1,8 +1,7 @@
 <div>
   <ul>
-    <li><a routerLink="/home" routerLinkActive="active">HOME1</a></li>
-    <li><a routerLink="/register" routerLinkActive="active">REGISTER</a></li>
-    <li><a *ngIf="!loginService.checkLogin()" routerLink="/register" routerLinkActive="active" >
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li *ngIf="!loginService.checkLogin()" ><a routerLink="/register" routerLinkActive="active" >
       Register
       </a></li>
       <li>    <a routerLink="/login" routerLinkActive="active" (click)="onClick()">

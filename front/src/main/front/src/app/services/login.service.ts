@@ -9,13 +9,13 @@ export class LoginService {
   constructor (private http: Http) {}
 
   sendCredential(model) {
-    let tokenUrl1 = "http://localhost:8084/user/login";
+    let tokenUrl1 = "http://localhost:8084/back/user/login";
     let headers1 = new Headers({'Content-Type': 'application/json'});
     return this.http.post(tokenUrl1, JSON.stringify(model), {headers: headers1});
   }
 
   sendToken(token) {
-    let tokenUrl2 = "http://localhost:8084/rest/user/users";
+    let tokenUrl2 = "http://localhost:8084/back/rest/user/users";
     console.log('Bearer '+token);
 
     let getHeaders = new Headers({'Authorization':'Bearer '+token});
