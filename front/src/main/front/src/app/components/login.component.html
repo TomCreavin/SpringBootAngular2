@@ -1,16 +1,18 @@
-<div>
+<md-card class="login-card">
+  <md-card-header>
+    <md-card-title>Login</md-card-title>
+  </md-card-header>
+  <md-card-content>
   <form (ngSubmit)="onSubmit()" [hidden]="loginService.checkLogin()">
-    <div>
-      <label for="username">Username</label>
-      <input type="text" required [(ngModel)]="model.username" ngControl="username" placeholder="Username" name="username" required><br>
-    </div>
+    <md-input-container>
+      <input mdInput type="text" required [(ngModel)]="model.username" ngControl="username" placeholder="Username" name="username" required>
+    </md-input-container>
 
-    <div>
-      <label for="password">Password</label>
-      <input type="password" required [(ngModel)]="model.password" ngControl="password" placeholder="password" name="password" required>
-    </div>
+    <md-input-container>
+      <input mdInput type="password" required [(ngModel)]="model.password" ngControl="password" placeholder="password" name="password" required>
+    </md-input-container>
 
-    <button type="submit" class="ui button">Submit</button>
+    <button md-raised-button type="submit">Submit</button>
   </form>
 
   <div [hidden]="!loginService.checkLogin()">
@@ -18,4 +20,5 @@
     <h2>Welcome back, {{currentUserName}}!</h2>
   </div>
 
-</div>
+  </md-card-content>
+</md-card>

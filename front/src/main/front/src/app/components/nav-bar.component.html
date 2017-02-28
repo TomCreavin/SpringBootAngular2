@@ -1,11 +1,18 @@
-<div>
-  <ul>
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li *ngIf="!loginService.checkLogin()" ><a routerLink="/register" routerLinkActive="active" >
-      Register
-      </a></li>
-      <li>    <a routerLink="/login" routerLinkActive="active" (click)="onClick()">
-      {{loginService.checkLogin()? 'Logout' : 'Login'}}
-    </a></li>
-  </ul>
-</div>
+
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item routerLink="/home" routerLinkActive="active">
+        <md-icon>home</md-icon>
+        <span>Home</span>
+      </button>
+      <button md-menu-item routerLink="/register" routerLinkActive="active" *ngIf="!loginService.checkLogin()">
+        <md-icon>announcement</md-icon>
+        <span>Register</span>
+      </button>
+      <button md-menu-item routerLink="/login" routerLinkActive="active" (click)="onClick()">
+        <md-icon>fingerprint</md-icon>
+        <span>{{loginService.checkLogin()? 'Logout' : 'Login'}}</span>
+      </button>
+    </md-menu>
