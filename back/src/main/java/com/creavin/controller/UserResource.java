@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hello.controller;
+package com.creavin.controller;
 
-import hello.model.User;
-import hello.service.UserService;
+import com.creavin.model.User;
+import com.creavin.service.UserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

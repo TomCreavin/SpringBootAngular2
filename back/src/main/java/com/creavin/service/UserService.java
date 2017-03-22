@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hello.service;
+package com.creavin.service;
 
-import hello.model.User;
+import com.creavin.model.User;
 import java.util.List;
 
 /**

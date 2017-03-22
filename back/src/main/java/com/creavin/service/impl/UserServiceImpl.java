@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hello.service.impl;
+package com.creavin.service.impl;
 
-import hello.dao.UserDao;
-import hello.model.User;
-import hello.service.UserService;
+import com.creavin.dao.UserDao;
+import com.creavin.model.User;
+import com.creavin.service.UserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
